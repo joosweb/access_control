@@ -27,7 +27,7 @@ $ php artisan serve
 api/buildings
 </code></pre>
 <h1 class="code-line" data-line-start=34 data-line-end=35 ><a id="User_Example_with_postman__34"></a>User Example with postman !</h1>
-<pre><code class="has-line-data" data-line-start="37" data-line-end="56" class="language-sh"> New User -&gt; http POST /users
+<pre><code class="has-line-data" data-line-start="37" data-line-end="56" class="language-sh"> New User -&gt; http POST api/users
 
  WITH body parameters :
  - name
