@@ -16,6 +16,7 @@
 <p class="has-line-data" data-line-start="12" data-line-end="13">Enter the project directory from your terminal and run.</p>
 <pre><code class="has-line-data" data-line-start="15" data-line-end="18" class="language-sh">$ php artisan migrate:refresh --seed
 $ php artisan serve
+$ php artisan test
 </code></pre>
 <h1 class="code-line" data-line-start=18 data-line-end=19 ><a id="How_to_test_with_postman_or_another_18"></a>How to test with postman or another!</h1>
 <p class="has-line-data" data-line-start="20" data-line-end="21">Actions Handled By Resource Controller</p>
