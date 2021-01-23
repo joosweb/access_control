@@ -6,6 +6,8 @@
 </ul>
 <h1 class="code-line" data-line-start=6 data-line-end=7 ><a id="Config_Database_6"></a>Config Database!</h1>
 <ul>
+<li class="has-line-data" data-line-start="8" data-line-end="10">assuming you already downloaded the git.</li>
+</ul>
 <li class="has-line-data" data-line-start="8" data-line-end="10">Create a database with the name &quot; api &quot; , skip the quotes.</li>
 </ul>
 <h1 class="code-line" data-line-start=10 data-line-end=11 ><a id="Running_migrations_seeds_and_run_server__10"></a>Running migrations, seeds and run server !</h1>
