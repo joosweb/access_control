@@ -49,7 +49,7 @@ class UserController extends Controller
         try {
           $request['password'] = bcrypt($request['password']);
           $user_created = User::create($request->all());
-          return response()->json(["msg" => "The user was created correctly"]);
+          return response()->json($user_created);
         } catch (\Exception $e) {
           return response()->json(["msg" => $e->getMessage()]);
         }
