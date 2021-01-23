@@ -14,7 +14,9 @@
 </ul>
 <h1 class="code-line" data-line-start=10 data-line-end=11 ><a id="Running_migrations_seeds_and_run_server__10"></a>Running migrations, seeds and run server !</h1>
 <p class="has-line-data" data-line-start="12" data-line-end="13">Enter the project directory from your terminal and run.</p>
-<pre><code class="has-line-data" data-line-start="15" data-line-end="18" class="language-sh">$ php artisan migrate:refresh --seed
+<pre><code class="has-line-data" data-line-start="15" data-line-end="18" class="language-sh">
+$ php composer update
+$ php artisan migrate:refresh --seed
 $ php artisan serve
 $ php artisan test
 </code></pre>
