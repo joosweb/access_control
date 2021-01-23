@@ -23,8 +23,8 @@ $ php artisan serve
 <p class="has-line-data" data-line-start="24" data-line-end="26"><a href="https://laravel.com/docs/8.x/controllers#actions-handled-by-resource-controller">https://laravel.com/docs/8.x/controllers#actions-handled-by-resource-controller</a><br>
 .</p>
 <p class="has-line-data" data-line-start="27" data-line-end="28">Url that support GET, POST, PUT, PATCH, DELETE.</p>
-<pre><code class="has-line-data" data-line-start="30" data-line-end="33" class="language-sh">/users
-/buildings
+<pre><code class="has-line-data" data-line-start="30" data-line-end="33" class="language-sh">api/users
+api/buildings
 </code></pre>
 <h1 class="code-line" data-line-start=34 data-line-end=35 ><a id="User_Example_with_postman__34"></a>User Example with postman !</h1>
 <pre><code class="has-line-data" data-line-start="37" data-line-end="56" class="language-sh"> New User -&gt; http POST /users
@@ -34,20 +34,20 @@ $ php artisan serve
  - email
  - password
 
- Update Building : http PUT/PATCH /building/{id}
+ Update Building : http PUT/PATCH api/building/{id}
 
  note: the building id can be from <span class="hljs-number">1</span> to <span class="hljs-number">5</span>
 
   WITH body parameters :
  - name
 
- Destroy User : http DELETE /users/{id}
+ Destroy User : http DELETE api/users/{id}
 
  note: the user id can be from <span class="hljs-number">1</span> to <span class="hljs-number">10</span>
 
 </code></pre>
 <h1 class="code-line" data-line-start=57 data-line-end=58 ><a id="Enter_a_user_to_a_building___57"></a>Enter a user to a building  !</h1>
-<pre><code class="has-line-data" data-line-start="60" data-line-end="71" class="language-sh">Http POST /entries-out
+<pre><code class="has-line-data" data-line-start="60" data-line-end="71" class="language-sh">Http POST api/entries-out
 
  WITH body parameters :
  - fk_user_id       (int | from <span class="hljs-number">1</span> to <span class="hljs-number">10</span>)

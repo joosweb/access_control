@@ -8,11 +8,12 @@ use App\Http\Controllers\EntriesOutController;
 use App\Http\Controllers\BlockListController;
 
 
-Route::resource('/users', UserController::class);
-Route::resource('/buildings', BuildingsController::class);
-Route::resource('/blocklist', BlockListController::class);
-Route::resource('/entries-out', EntriesOutController::class);
-
+Route::group(['prefix' => 'api'], function() {
+  Route::resource('/users', UserController::class);
+  Route::resource('/buildings', BuildingsController::class);
+  Route::resource('/blocklist', BlockListController::class);
+  Route::resource('/entries-out', EntriesOutController::class);
+});
 
 Route::get('/', function () {
     return view('welcome');
