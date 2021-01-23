@@ -47,7 +47,7 @@ class UsersTest extends TestCase
     {
       $faker = \Faker\Factory::create();
 
-      $post = User::create([
+      $user = User::create([
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
@@ -55,7 +55,7 @@ class UsersTest extends TestCase
         'remember_token' => Str::random(10),
       ]);
 
-      $this->get('api/users/'.$post->id)
+      $this->get('api/users/'.$user->id)
             ->assertStatus(200);
     }
 
@@ -64,7 +64,7 @@ class UsersTest extends TestCase
     {
       $faker = \Faker\Factory::create();
 
-      $post = User::create([
+      $user = User::create([
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
@@ -80,7 +80,7 @@ class UsersTest extends TestCase
         'remember_token' => Str::random(10),
         ];
 
-      $this->put('api/users/'.$post->id, $data)
+      $this->put('api/users/'.$user->id, $data)
             ->assertStatus(200);
 
     }
@@ -90,7 +90,7 @@ class UsersTest extends TestCase
 
       $faker = \Faker\Factory::create();
 
-      $post = User::create([
+      $user = User::create([
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
@@ -98,7 +98,7 @@ class UsersTest extends TestCase
         'remember_token' => Str::random(10),
       ]);
 
-      $this->delete('api/users/'.$post->id)
+      $this->delete('api/users/'.$user->id)
             ->assertStatus(200);
     }
 }
