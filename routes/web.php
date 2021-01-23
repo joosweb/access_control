@@ -10,7 +10,7 @@ use App\Http\Controllers\BlockListController;
 
 Route::resource('/users', UserController::class);
 Route::resource('/buildings', BuildingsController::class);
-//Route::resource('/blocklist', 'BlockListController');
+Route::resource('/blocklist', BlockListController::class);
 Route::resource('/entries-out', EntriesOutController::class);
 
 

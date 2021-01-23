@@ -1,62 +1,57 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Access_Control_App_0"></a>Access Control App!</h1>
+<p class="has-line-data" data-line-start="1" data-line-end="2">Small application for the management of buildings, in order to know who enters and who leaves with their respective data such as the date and time, in addition to a black list where the people who cannot enter will be…</p>
+<ul>
+<li class="has-line-data" data-line-start="3" data-line-end="4">Laravel 8.12</li>
+<li class="has-line-data" data-line-start="4" data-line-end="6">Mysql</li>
+</ul>
+<h1 class="code-line" data-line-start=6 data-line-end=7 ><a id="Config_Database_6"></a>Config Database!</h1>
+<ul>
+<li class="has-line-data" data-line-start="8" data-line-end="10">Create a database with the name &quot; api &quot; , skip the quotes.</li>
+</ul>
+<h1 class="code-line" data-line-start=10 data-line-end=11 ><a id="Running_migrations_seeds_and_run_server__10"></a>Running migrations, seeds and run server !</h1>
+<p class="has-line-data" data-line-start="12" data-line-end="13">Enter the project directory from your terminal and run.</p>
+<pre><code class="has-line-data" data-line-start="15" data-line-end="18" class="language-sh">$ php artisan migrate:refresh --seed
+$ php artisan serve
+</code></pre>
+<h1 class="code-line" data-line-start=18 data-line-end=19 ><a id="How_to_test_with_postman_or_another_18"></a>How to test with postman or another!</h1>
+<p class="has-line-data" data-line-start="20" data-line-end="21">Actions Handled By Resource Controller</p>
+<p class="has-line-data" data-line-start="22" data-line-end="23">For more details visit:</p>
+<p class="has-line-data" data-line-start="24" data-line-end="26"><a href="https://laravel.com/docs/8.x/controllers#actions-handled-by-resource-controller">https://laravel.com/docs/8.x/controllers#actions-handled-by-resource-controller</a><br>
+.</p>
+<p class="has-line-data" data-line-start="27" data-line-end="28">Url that support GET, POST, PUT, PATCH, DELETE.</p>
+<pre><code class="has-line-data" data-line-start="30" data-line-end="33" class="language-sh">/users
+/buildings
+</code></pre>
+<h1 class="code-line" data-line-start=34 data-line-end=35 ><a id="User_Example_with_postman__34"></a>User Example with postman !</h1>
+<pre><code class="has-line-data" data-line-start="37" data-line-end="56" class="language-sh"> New User -&gt; http POST /users
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+ WITH body parameters :
+ - name
+ - email
+ - password
 
-## About Laravel
+ Update Building : http PUT/PATCH /building/{id}
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+ note: the building id can be from <span class="hljs-number">1</span> to <span class="hljs-number">5</span>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+  WITH body parameters :
+ - name
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+ Destroy User : http DELETE /users/{id}
 
-## Learning Laravel
+ note: the user id can be from <span class="hljs-number">1</span> to <span class="hljs-number">10</span>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+</code></pre>
+<h1 class="code-line" data-line-start=57 data-line-end=58 ><a id="Enter_a_user_to_a_building___57"></a>Enter a user to a building  !</h1>
+<pre><code class="has-line-data" data-line-start="60" data-line-end="71" class="language-sh">Http POST /entries-out
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+ WITH body parameters :
+ - fk_user_id       (int | from <span class="hljs-number">1</span> to <span class="hljs-number">10</span>)
+ - fk_building_id   (int | from <span class="hljs-number">1</span> to <span class="hljs-number">5</span>)
+ - action           (Boolean | <span class="hljs-number">0</span> = Entries and <span class="hljs-number">1</span> = Out)
 
-## Laravel Sponsors
+ note:
+ from <span class="hljs-number">1</span> to <span class="hljs-number">5</span> the fk_user_id are blocked so you will get a message.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+</code></pre>
+<p class="has-line-data" data-line-start="75" data-line-end="76"><strong>END !</strong></p>
