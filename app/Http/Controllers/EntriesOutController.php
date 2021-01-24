@@ -52,7 +52,7 @@ class EntriesOutController extends Controller
           if($isBlock) {
             return response()->json([
               'user_blocked' => true,
-              'user_name' => $isBlock->user->name,
+              'user' => $isBlock->user,
               'building_name' => $isBlock->building->name,
               'block_reason' =>  $isBlock->observation,
             ]);
