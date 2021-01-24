@@ -20,7 +20,17 @@ $ php composer update
 $ php artisan key:generate
 $ php artisan migrate:refresh --seed
 $ php artisan serve
+
+On mac you can run all tests with this command
+
 $ php artisan test
+
+On windows run individually
+
+$ ./vendor/bin/phpunit ./tests/Feature/BuildingsTest.php
+$ ./vendor/bin/phpunit ./tests/Feature/UsersTest.php
+$ ./vendor/bin/phpunit ./tests/Feature/EntriesOutTest.php
+
 </code></pre>
 <h1 class="code-line" data-line-start=18 data-line-end=19 ><a id="How_to_test_with_postman_or_another_18"></a>How to test with postman or another!</h1>
 <p class="has-line-data" data-line-start="20" data-line-end="21">Actions Handled By Resource Controller</p>
