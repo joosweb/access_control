@@ -16,7 +16,7 @@
 <p class="has-line-data" data-line-start="12" data-line-end="13">Enter the project directory from your terminal and run.</p>
 <pre><code class="has-line-data" data-line-start="15" data-line-end="18" class="language-sh">
 
-$ php composer update
+$ composer update
 $ php artisan key:generate
 $ php artisan migrate:refresh --seed
 $ php artisan serve
